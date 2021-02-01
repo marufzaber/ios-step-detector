@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/2.0.3/pure-min.css" integrity="sha512-FEioxlObRXIskNAQ1/L0byx0SEkfAY+5fO024p9kGEfUQnACGRfCG5Af4bp/7sPNSzKbMtvmcJOWZC7fPX1/FA==" crossorigin="anonymous" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@latest/dist/chartjs-plugin-streaming.min.js"></script>
+  <script src="process_signal.js"></script>
+</head>
+<body>
+<main>
+<h1>Step count: <span id="num-steps">0</span></h1>
+
+<a class="pure-button" id="start_button" href="#">Start</a>
+<p>Num. of datapoints: <span id="num-observed-events">0</span></p>
+
+<canvas id="graph"></canvas>
+
+<table class="pure-table">
+  <thead>
+    <tr>
+      <th>Dim</th>
+      <th>Accelerometer</th>
+      <th>Gyroscope</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>X-axis</td>
+      <td><span id="Accelerometer_x">0</span><span> m/s<sup>2</sup></span></td>
+      <td><span id="Gyroscope_x">0</span><span>°/s</span></td>
+    </tr>
+    <tr>
+      <td>Y-axis</td>
+      <td><span id="Accelerometer_y">0</span><span> m/s<sup>2</sup></span></td>
+      <td><span id="Gyroscope_y">0</span><span>°/s</span></td>
+    </tr>
+    <tr>
+      <td>Z-axis</td>
+      <td><span id="Accelerometer_z">0</span><span> m/s<sup>2</sup></span></td>
+      <td><span id="Gyroscope_z">0</span><span>°/s</span></td>
+    </tr>
+  </tbody>
+</table>
+
+</main>
+<footer>
+  Loosely adapted from the demo provided by <a href="https://sensor-js.xyz/">Das et al.</a>, CCS 2018.
+</footer>
+
+
+</body></html>
